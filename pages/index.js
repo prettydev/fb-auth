@@ -61,12 +61,7 @@ export default function Page() {
             </div>                    
         </tbody>
       </table>
-        </div>}
-              <a
-                href={`/api/fb/signin`}                
-              >
-                Login through api
-              </a>
+        </div>}              
     </Layout>
   )
 }

@@ -10,19 +10,19 @@ export default function Page() {
       <h1>Facebook Authentication Example</h1>
       {session && <>
             
-              <h1>email:</h1>
-        <strong>{session.user.email}</strong>
+              <strong>email:</strong>
+        <h1>{session.user.email}</h1>
         
-          <h1>username:</h1>
-        <strong>{session.user.name}</strong>
+          <strong>username:</strong>
+        <h1>{session.user.name}</h1>
         
-          <h1>image:</h1><img src={ session.user.image}/><br/>
-        <strong>{session.user.image}</strong><br/>
+          <strong>image:</strong><img src={ session.user.image}/><br/>
+        <h1>{session.user.image}</h1><br/>
 
         
         
-        <h1>expires:</h1>
-              <strong>{session.expires}</strong>
+        <strong>expires:</strong>
+              <h1>{session.expires}</h1>
               
           </>}
     </Layout>

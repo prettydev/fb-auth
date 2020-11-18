@@ -83,11 +83,13 @@ const Page = () => {
         {video_list.map((v, i) => (
           <div className="">
             <ReactPlayer url={v} width="260px" height="180px" />
-            <div className="m-1">
-              <FacebookShareButton url={v}>
+
+            <FacebookShareButton url={v}>
+              <div className="m-1 flex flex-row gap-2 items-center">
                 <FacebookIcon size={32} round />
-              </FacebookShareButton>
-            </div>
+                <span>Share</span>
+              </div>
+            </FacebookShareButton>
           </div>
         ))}
       </div>

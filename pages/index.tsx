@@ -82,14 +82,16 @@ const Page = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-4">
         {video_list.map((v, i) => (
           <div className="">
-            <ReactPlayer url={v} width="260px" height="180px" />
+            <ReactPlayer url={v} width="240px" height="180px" />
 
-            <FacebookShareButton url={v}>
-              <div className="m-1 flex flex-row gap-2 items-center">
-                <FacebookIcon size={32} round />
-                <span>Share</span>
-              </div>
-            </FacebookShareButton>
+            <div className="flex">
+              <FacebookShareButton url={v} className="mx-auto">
+                <div className="m-1 flex flex-row gap-2 items-center">
+                  <FacebookIcon size={32} round />
+                  <span>Share</span>
+                </div>
+              </FacebookShareButton>
+            </div>
           </div>
         ))}
       </div>

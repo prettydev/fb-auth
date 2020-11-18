@@ -44,6 +44,10 @@ export default function Page() {
               />              
             </div>
             <div className="border-4 border-gray-200 flex flex-row items-center px-16 py-2 justify-between">              
+              <div>image url</div>              
+              <div className="text-center ml-2 font-semibold">{ session.user.image}</div>                           
+            </div>
+            <div className="border-4 border-gray-200 flex flex-row items-center px-16 py-2 justify-between">              
                 <div>Name</div>
                  <div className="text-center ml-2 font-semibold">{ session.user.name}</div>              
             </div>

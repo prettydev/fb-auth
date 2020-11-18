@@ -44,13 +44,13 @@ const Page = () => {
       {session && (
         <table className="w-full table-auto">
           <thead className="justify-between">
-            <div className="bg-gray-800 px-16 py-2 flex flex-row justify-between">
+            <div className="bg-gray-800 px-8 py-2 flex flex-row justify-between">
               <span className="text-gray-300">Field</span>
               <span className="text-gray-300">Value</span>
             </div>
           </thead>
           <tbody className="bg-gray-200">
-            <div className="border-4 border-gray-200 flex flex-row items-center px-16 py-2 justify-between">
+            <div className="border-4 border-gray-200 flex flex-row items-center px-8 py-2 justify-between">
               <div>image</div>
               <img
                 className="h-8 w-8 rounded-full object-cover "
@@ -59,19 +59,19 @@ const Page = () => {
                 title={session.user.image}
               />
             </div>
-            <div className="border-4 border-gray-200 flex flex-row items-center px-16 py-2 justify-between">
+            <div className="border-4 border-gray-200 flex flex-row items-center px-8 py-2 justify-between">
               <div>Name</div>
               <div className="text-center ml-2 font-semibold">
                 {session.user.name}
               </div>
             </div>
-            <div className="border-4 border-gray-200 flex flex-row items-center px-16 py-2 justify-between">
+            <div className="border-4 border-gray-200 flex flex-row items-center px-8 py-2 justify-between">
               <div>Email</div>
               <div className="text-center ml-2 font-semibold">
                 {session.user.email}
               </div>
             </div>
-            <div className="border-4 border-gray-200 flex flex-row items-center px-16 py-2 justify-between">
+            <div className="border-4 border-gray-200 flex flex-row items-center px-8 py-2 justify-between">
               <div>Expires</div>
               <div>{session.expires}</div>
             </div>

@@ -1,4 +1,4 @@
-const { Facebook, FacebookApiException } = require("fb");
+const { Facebook } = require("fb");
 const options = {
   appId: process.env.FACEBOOK_ID,
   autoLogAppEvents: true,
@@ -8,7 +8,13 @@ const options = {
 const fb = new Facebook(options);
 fb.setAccessToken(process.env.FACEBOOK_TOKEN);
 
-export default async (req, res) => {        
-    const friends = await fb.api("/112821927130490/friends");
-    res.send(JSON.stringify(friends, null, 2))
+export default async (req, res) => {     
+  
+  let friends = {};
+  
+  if (req.query.id) {
+    friends = await fb.api(`/${req.query.id}/friends`);
+  }
+
+  res.send(JSON.stringify(friends, null, 2))
 }

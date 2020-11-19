@@ -1,13 +1,7 @@
 import Layout from "../components/layout";
 import { useSession } from "next-auth/client";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import ReactPlayer from "react-player";
-import {
-  FacebookShareButton,
-  FacebookShareCount,
-  FacebookIcon,
-} from "react-share";
+import { FacebookShareButton, FacebookIcon } from "react-share";
 
 const video_list = [
   "https://www.youtube.com/embed/EXM7hkosdEQ",
@@ -18,26 +12,14 @@ const video_list = [
   "https://www.youtube.com/embed/qdnbAd_vbVE",
 ];
 
-const Page = () => {
+const Index = () => {
   const [session, loading] = useSession();
-  const [friends_count, setFriendsCount] = useState(0);
-
-  const getFriendsCount = async () => {
-    const { data } = await axios("/api/fb/friends");
-    if (data && data.summary) {
-      setFriendsCount(data.summary.total_count);
-    }
-  };
-
-  useEffect(() => {
-    getFriendsCount();
-  }, []);
 
   return (
     <Layout>
       <div className="flex">
         <h1 className="mt-8 font-semibold mx-auto text-3xl">
-          Facebook Auth Demo
+          Facebook Auth&Share Demo
         </h1>
       </div>
 
@@ -81,7 +63,7 @@ const Page = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-4">
         {video_list.map((v, i) => (
-          <div className="">
+          <div key={i} className="">
             <ReactPlayer url={v} width="240px" height="180px" />
 
             <div className="flex">
@@ -99,4 +81,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Index;

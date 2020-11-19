@@ -1,4 +1,4 @@
-const { Facebook, FacebookApiException } = require("fb");
+const { Facebook } = require("fb");
 const options = {
   appId: process.env.FACEBOOK_ID,
   autoLogAppEvents: true,
